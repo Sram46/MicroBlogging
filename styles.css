@@ -1,12 +1,12 @@
 /* General styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;    /* Center content horizontally */
     height: 100vh;
     color: #333;
 }
@@ -17,12 +17,16 @@ header {
     text-align: center;
     padding: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure the header spans the full width */
+    position: relative;     /* Make sure the header stays at the top */
+    top: 0;                 /* Align header at the top of the page */
 }
 
 main {
     max-width: 600px;
     margin: 20px auto;
     padding: 0 20px;
+    flex: 1; /* Allow main content to take remaining space */
 }
 
 .container {
@@ -61,12 +65,14 @@ button {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+/* Primary button styling */
 .primary-btn {
     background-color: #007bff;
 }
@@ -107,5 +113,9 @@ button:hover {
 
     input, textarea {
         padding: 10px;
+    }
+
+    header {
+        padding: 0.75rem; /* Adjust header padding on smaller screens */
     }
 }
