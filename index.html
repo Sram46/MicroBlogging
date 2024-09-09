@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Microblogging App</title>
+</head>
+<body>
+    <header>
+        <h1>Microblogging App</h1>
+    </header>
+    <main>
+        <div id="login-form" class="container">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <button id="login-btn" class="primary-btn">Login</button>
+        </div>
+        <div id="user-dashboard" class="container" style="display: none;">
+            <h2>Welcome, <span id="user-username"></span>!</h2>
+            <textarea id="post-content" placeholder="What's on your mind?"></textarea>
+            <button id="post-btn" class="primary-btn">Post</button>
+
+            <h3>Follow a User</h3>
+            <input type="text" id="follow-username" placeholder="Enter username to follow">
+            <button id="follow-btn" class="primary-btn">Follow</button>
+
+            <h3>Your Feed</h3>
+            <ul id="post-list" class="post-list"></ul>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
