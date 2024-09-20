@@ -8,17 +8,21 @@
 </head>
 <body>
     <header>
+        <img src="blog logo.webp" alt="Logo" class="logo">
         <h1>Microblogging App</h1>
     </header>
+    <br>
     <main>
         <div id="login-form" class="container">
             <h2>Login</h2>
-            <input type="text" id="username" placeholder="Enter your username" required>
-            <button id="login-btn" class="primary-btn">Login</button>
+            <input type="text" id="username" placeholder="Enter your username" required><br>
+            <button id="login-btn" class="login-btn">Login</button>
         </div>
         <div id="user-dashboard" class="container" style="display: none;">
+            <button id="logout-btn" class="logout-btn">Logout</button>
             <h2>Welcome, <span id="user-username"></span>!</h2>
             <textarea id="post-content" placeholder="What's on your mind?"></textarea>
+            <input type="file" id="post-media" accept="image/*,video/*">
             <button id="post-btn" class="primary-btn">Post</button>
 
             <h3>Follow a User</h3>
@@ -28,7 +32,6 @@
             <h3>Your Feed</h3>
             <ul id="post-list" class="post-list"></ul>
         </div>
-    </main>
-    <script src="app.js"></script>
+    </main>    <script src="app.js"></script>
 </body>
 </html>
